@@ -1,4 +1,4 @@
-country_to_usd = {
+country = {
     "afghanistan": 0.011,
     "albania": 0.0095,
     "algeria": 0.0071,
@@ -196,9 +196,9 @@ convert = input('Convert from (Enter country) : ').lower()
 convert2 = input('Convert to (Enter country) : ').lower()
 amt = float(input('Enter amount : '))
 
-if convert in country_to_usd and convert2 in country_to_usd:
-    usd = amt * country_to_usd[convert]
-    result = usd / country_to_usd[convert2]
+if convert in country and convert2 in country:
+    usd = amt * country[convert]
+    result = usd / country[convert2]
     print(f"Converted amount : {result:.2f}")
 else:
     print("Invalid country input.")
